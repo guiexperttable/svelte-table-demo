@@ -1,12 +1,12 @@
 <script lang="ts">
 
-  import { ComponentRendererWrapper, SvelteTable } from "@guiexpert/svelte-table";
+  import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/svelte-table";
   import { ColumnDefIf, TableModelFactory } from "@guiexpert/table";
   import {
     applyBodyRenderer,
     createColumnDefs,
     createTableOptions,
-    createTableRows
+    createTableRows, SimplePersonIf
   } from "@guiexpert/demo-table-models";
   import { default as GenderRendererComponent } from "./GenderRendererComponent.svelte";
 
@@ -31,12 +31,12 @@
 </script>
 
 <main>
-  <SvelteTable
+  <GuiexpertTable
     on:mouseClicked={handleMouseClicked}
     on:tableReady={handleTableReady}
     tableModel={tableModel}
     tableOptions={tableOptions}
-  ></SvelteTable>
+  ></GuiexpertTable>
 </main>
 
 <style>
