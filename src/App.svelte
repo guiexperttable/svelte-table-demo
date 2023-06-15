@@ -1,7 +1,7 @@
 <script lang="ts">
 
   import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/svelte-table";
-  import { ColumnDefIf, TableModelFactory } from "@guiexpert/table";
+  import { ColumnDefIf, TreeFactory } from "@guiexpert/table";
   import {
     applyBodyRenderer,
     createColumnDefs,
@@ -14,7 +14,7 @@
   const rows: SimplePersonIf[] = createTableRows();
   const columnDefs: ColumnDefIf[] = createColumnDefs();
   applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
-  const tableModel = TableModelFactory.buildByTypedRowsParam({
+  const tableModel = TreeFactory.buildByTypedRowsParam({
     rows,
     columnDefs,
     tableOptions,
